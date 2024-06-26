@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.microsphere-projects</groupId>
+        <artifactId>microsphere-build</artifactId>
+        <version>0.0.15</version>
+    </parent>
+
+    <groupId>io.github.microsphere-projects</groupId>
+    <artifactId>microsphere-tools</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <name>Microsphere :: Tools</name>
+    <description>Microsphere Projects for Tools</description>
+    <url>https://github.com/microsphere-projects/microsphere-tools</url>
+
+    <organization>
+        <name>Microsphere</name>
+        <url>https://github.com/microsphere-projects</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>mercyblitz</id>
+            <name>Mercy Ma</name>
+            <email>mercyblitz@gmail.com</email>
+            <organization>Microsphere</organization>
+            <roles>
+                <role>lead</role>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>git@github.com/microsphere-projects/microsphere-tools.git</url>
+        <connection>scm:git:${project.scm.url}</connection>
+        <developerConnection>scm:git:ssh://${project.scm.url}</developerConnection>
+    </scm>
+
+    <properties>
+        <revision>0.0.1-SNAPSHOT</revision>
+    </properties>
+
+    <modules>
+        <module>microsphere-tools-parent</module>
+        <module>microsphere-tools-dependencies</module>
+        <module>microsphere-jdk-tools</module>
+    </modules>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>snapshot</id>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
+
+</project>
